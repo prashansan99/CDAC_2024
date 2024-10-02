@@ -1,7 +1,7 @@
 /*2. Working with java.lang.Byte*/
 package Pkg1;
 
-public class Prg6 {
+public class Program5 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
