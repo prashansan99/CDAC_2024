@@ -1,0 +1,33 @@
+import java.util.*;
+// Driver Class
+class NumbPalindrome {
+    // Iterative function to
+    // reverse the digits of number
+    static int reversNumber(int n)
+    {
+        int reversed_n = 0;
+        while (n > 0) {
+            reversed_n = reversed_n * 10 + n % 10;
+            n = n / 10;
+        }
+        return reversed_n;
+    }
+ 
+    // Main function
+    public static void main(String[] args)
+    {
+		System.out.println("Enter the number: ");
+		Scanner sc= new Scanner(System.in);
+		int n= sc.nextInt();
+	
+        int reverseN = reversNumber(n);
+        System.out.println("Reverse of n = " + reverseN);
+ 
+        // Checking if n is same
+        // as reverse of n
+        if (n == reverseN)
+            System.out.println("true");
+        else
+            System.out.println("false");
+    }
+}
