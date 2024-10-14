@@ -1,3 +1,6 @@
+/*Explanation: The Fibonacci series is the sequence where each number is the sum of the previous two numbers of the sequence.
+The first two numbers of the Fibonacci series are 0 and 1 and are used to generate the Fibonacci series.
+*/
 import java.util.Scanner;
 class Fibonacci
 {
@@ -38,4 +41,8 @@ Enter the number:
 0 1 1 2 3 5
 
 */
+
+/*Time Complexity: O(n)
+*/
+
 		
