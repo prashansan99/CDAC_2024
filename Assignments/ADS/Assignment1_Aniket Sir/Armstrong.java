@@ -1,3 +1,6 @@
+/*Explanation: In a mathematical number system, the Armstrong number is the number in any given number base, which makes the 
+total of the same number when each of its digits is raised to the power of the total number of digits in the number. 
+*/
 import java.util.Scanner;
 
 public class Armstrong
