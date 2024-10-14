@@ -65,6 +65,9 @@ Enter the number:
 123
 false
 */ 
+/*Time complexity: O(n)
+
+*/
 	
 	
 		
