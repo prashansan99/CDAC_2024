@@ -1,3 +1,6 @@
+/*Explanation: The very basic idea is to use two nested loops, the outer loop for picking an element and the inner loop for checking the repeating character for picked element.
+	If no repeating character found for any characters then return the index of currently picked element, otherwise return -1;
+*/
 import java.util.Scanner;
 class NonRepeatedChar{
 	private static char isNotRepeated(String str){
@@ -22,3 +25,10 @@ class NonRepeatedChar{
 		System.out.println(isNotRepeated(str));
 	}
 }
+/*Output:
+Enter the String: Prashansa
+Prshn
+*/
+
+/*Time complexity: O(n^2)
+	*/
