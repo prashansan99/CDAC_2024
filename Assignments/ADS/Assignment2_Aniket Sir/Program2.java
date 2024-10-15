@@ -1,3 +1,8 @@
+/*Explanation:
+Create a temporary array temp[] to store unique elements.
+Sort the input array first then traverse input array and copy all the unique elements of a[] to temp[]. Also, keep count of unique elements. Let this count be j.
+Copy j elements from temp[] to a[].
+*/
 import java.util.*;
 public class Program2
 {
@@ -47,3 +52,6 @@ C:\Users\PRASHANSA\OneDrive\Desktop\ADS Notes\Assignment_Solutions\Assignment_2>
 1 2 3 4 5 6
 6
 */
+/*Time Complexity:
+ O(nlogn)
+	 */
