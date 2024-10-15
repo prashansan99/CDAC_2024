@@ -1,3 +1,8 @@
+/*Explanation: Take the number’s modulo by 10.
+Multiply the reverse number by 10 and add modulo value into the reverse number.
+Divide the number by 10.
+Repeat above steps until number becomes zero.
+*/
 import java.util.Scanner;
 class Program7
 {
@@ -30,4 +35,7 @@ C:\Users\PRASHANSA\OneDrive\Desktop\ADS Notes\Assignment_Solutions\Assignment_2>
 3234
 4323
 */
+/*Time complexity:
+O(log10n) 
+	*/
 	
