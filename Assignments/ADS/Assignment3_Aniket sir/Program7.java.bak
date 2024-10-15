@@ -1,0 +1,153 @@
+import java.util.Scanner;
+
+class CircularQueue {
+	
+	
+	int arr[] ;
+	int front , rare;
+	
+	public CircularQueue(int size) {
+		arr = new int [size];
+		front = -1;
+		rare = -1;
+	}
+	
+	
+	boolean isFull() {
+		return (front == rare && front != -1) || (rare == arr.length-1 && front == -1 )  ;
+	}
+	
+	boolean isEmpty() {
+		return ((front == rare && front == -1));
+	}
+	
+	
+	void push(int val) {
+		
+		if(isFull()) {
+			throw new RuntimeException("Queue is Full");
+		}
+		else {
+				rare = (rare+1)%arr.length ;
+				arr[rare] = val;
+		}
+		
+			
+		
+	}
+	
+	void pop () {
+		if(isEmpty()) {
+			throw new RuntimeException("Queue is Empty");
+		}
+		else {
+			front = (front + 1) % arr.length;	
+		}
+		
+		if(front == rare) {
+			front =-1;
+			rare = -1;
+		}
+			
+	}
+	
+	void peek() {
+		
+		if(isEmpty()) {
+			throw new RuntimeException("Queue is Empty");
+		}
+		
+		else {
+			
+			int index = (front+1)%arr.length;
+			System.out.println(arr[index]);
+		}
+		
+		
+	}	
+
+}
+
+
+
+public class CircularQueueMain{
+	
+	private static Scanner sc = new Scanner(System.in);
+	
+		//menuList::
+	public static int menuList() {
+			
+			System.out.println("push 1");
+			System.out.println("pop  2");
+			System.out.println("peek 3");
+			System.out.println();
+			
+		
+			System.out.print("Enter choice:: ");
+			int choice = sc.nextInt();
+			return choice;
+		}
+	
+	public static void main(String[] args) {
+		
+		 System.out.print("Enter Array Size:: ");
+		CircularQueue queue = new CircularQueue(sc.nextInt());
+			
+		int choice , val;
+			
+		while((choice = CircularQueueMain.menuList()) != 0) {
+			switch(choice) {
+			
+				case 1: //push()
+					try {
+						System.out.print("Enter  ::");
+						val = sc.nextInt();
+						queue.push(val);
+						
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						System.out.println(e.getMessage());
+					}
+						break;
+						
+				case 2 : //pop();
+					try {
+						System.out.print("pop :: ");
+						queue.peek();
+						queue.pop();
+					} catch (Exception e) {
+						System.out.println(e.getMessage());
+					}
+						break;
+						
+				case 3 : //peek();
+					try {
+						System.out.print("Next pop ::");
+						queue.peek();
+					} catch (Exception e) {
+						System.out.println(e.getMessage());
+					}
+						break;
+
+					
+			
+			}
+		}
+	
+		
+		
+		
+		
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
