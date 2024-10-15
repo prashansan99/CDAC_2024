@@ -1,3 +1,9 @@
+/*Explanation:  splitting String str with a pattern 
+        (i.e )splitting the string whenever their 
+         is whitespace and store in temp array. 
+	 Iterate over the temp array and store 
+         the string in reverse order
+*/
 import java.util.*;
 class Program6
 {
@@ -31,6 +37,12 @@ class Program6
 		System.out.println(ans);
 	}
 }
+/*Output: Java Programming
+	Programming Java
+	*/
+/*Time complexity:  O(n), where n is the length of the string.
+	*/
+	
 		
 		
 		
