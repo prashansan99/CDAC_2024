@@ -1,3 +1,13 @@
+/*Explanation: update(l, r, x) : Run a loop from l to r and add x to all elements from A[l] to A[r]
+printArray() : Simply print A[].
+Time complexities of both of the above operations is O(n)
+An efficient solution is to use difference array. 
+Difference array D[i] of a given array A[i] is defined as D[i] = A[i]-A[i-1] (for 0 < i < N ) and D[0] = A[0] considering 0 based indexing.
+Difference array can be used to perform range update queries “l r x” where l is left index, r is right index and x is value to be added and 
+after all queries you can return original array from it. Where update range operations can be performed in O(1) complexity.
+update(l, r, x) : Add x to D[l] and subtract it from D[r+1], i.e., we do D[l] += x, D[r+1] -= x
+printArray() : Do A[0] = D[0] and print it. For rest of the elements, do A[i] = A[i-1] + D[i] and print them.
+	*/
 // Java code to demonstrate Difference Array 
 class Program8 { 
 	
@@ -60,5 +70,10 @@ class Program8 {
 		printArray(A, D); 
 	} 
 } 
+/*Output: 20 15 20 40 
+20 35 70 60 
+	*/
+/*Time complexity:  O(n)
+	*/
 
 
