@@ -1,3 +1,6 @@
+/*Explanation: The idea is to start at the last character of the string and move backward, appending each character to a new string res. 
+This new string res will contain the characters of the original string in reverse order.
+*/
 import java.util.Scanner;
 class Program4
 {
@@ -26,3 +29,5 @@ Prashansa
 asnahsarP
 
 */
+/*Time complexity: O(n)
+	*/
