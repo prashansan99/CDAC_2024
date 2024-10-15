@@ -1,3 +1,8 @@
+/*Explanation: 1. Find the occurrences of character ‘a’ in the given string. 
+2. Find the No. of repetitions which are required to find the ‘a’ occurrences. 
+3. Multiply the single string occurrences to the No. of repetitions. 
+4. If given n is not the multiple of given string size then we will find the ‘a’ occurrences in the remaining substring.
+	*/
 import java.util.*;
 
 public class RepeatedChar
@@ -42,5 +47,10 @@ public class RepeatedChar
         printDuplicates(str);
     }
 }
-	
+/*Output:
+aaabcd
+a 3
+*/
+/*Time Complexity: O(length(str))
+	*/
 		
