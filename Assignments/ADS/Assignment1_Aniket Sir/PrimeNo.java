@@ -1,3 +1,8 @@
+/*Explanation: If n is less than 2, return false (0 and 1 are not prime).
+Loop through numbers from 2 to n-1.
+If n is divisible by any of these numbers, return false.
+If no divisors are found, return true.
+*/
 import java.util.Scanner;
 class PrimeNo
 {
@@ -46,6 +51,9 @@ Enter the number:
 false
 
 
+*/
+/*Time complexity:
+ O(n)
 */
 		
 			
