@@ -1,0 +1,39 @@
+/*Explanation: To flatten a multilevel linked list, start from the top level and process each node sequentially. For each node, if it has a child node, append this child node to the end of the current list. Continue this process for every node, updating the end of the list accordingly, until all
+ nodes are processed and the list is flattened.
+ */
+class Program11 {
+   private Queue<Node> store = new LinkedList<>();
+
+public void helper(Node head)
+{
+    Node temp;
+    while (head != null)
+    {
+        temp = head.next;
+        head.next = null;
+        head.prev = null;
+        store.offer(head);
+        if (head.child != null)
+            helper(head.child);
+        head.child = null;
+        head = temp;
+    }
+}
+
+public Node flatten(Node head) {
+    helper(head);
+    if (store.peek() == null)
+        return head;
+    Node retval = store.poll();
+    Node first = retval;
+    while (store.peek() != null)
+    {
+        Node second = store.poll();
+        first.next = second;
+        second.prev = first;
+        first = second;
+    }
+    first.next = null;
+    return retval;
+}
+}
