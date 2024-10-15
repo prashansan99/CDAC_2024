@@ -1,3 +1,5 @@
+/*Explanation: A string is said to be a palindrome if it is the same if we start reading it from left to right or right to left.
+*/
 import java.util.Scanner;
 class Program9
 {
@@ -41,3 +43,5 @@ C:\Users\PRASHANSA\OneDrive\Desktop\ADS Notes\Assignment_Solutions\Assignment_2>
 Prashansa
 false
 */
+/*Time complexity: O(n)
+	*/
