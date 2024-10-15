@@ -1,3 +1,5 @@
+/*Explantion: Used the sqrt() function for getting the square root of the number.
+*/
 import java.util.Scanner;
 import java.lang.Math;
 
@@ -54,6 +56,12 @@ class Sqrt
 		System.out.println("Square root of a number: "+squareRoot(num));
 	}
 }
+/*Output: 
+Enter the number: 4
+Square root of a number: 2
+	*/
+/*Time complexity: O(logN)
+	*/
 		
 		
 		
