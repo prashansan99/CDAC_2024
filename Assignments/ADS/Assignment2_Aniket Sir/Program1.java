@@ -1,3 +1,5 @@
+/*Explanation: used 2 for loops, One for the rows and other for the columns and printed stars according to the pattern.
+*/
 import java.util.Scanner;
 
 class Program1
@@ -28,6 +30,8 @@ C:\Users\PRASHANSA\OneDrive\Desktop\ADS Notes\Assignment_Solutions\Assignment_2>
 ***
 ****
 *****
+*/
+/*Time complexity: O(N^2)
 */
 		
 		
