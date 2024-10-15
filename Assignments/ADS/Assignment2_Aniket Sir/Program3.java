@@ -1,3 +1,8 @@
+/*Explanation: 1) Iterate through all characters of given string, do following
+   a) If current character is a space, then move all subsequent
+      characters one position back and decrease length of the 
+      result string.
+*/
 import java.util.Scanner;
 class Program3
 {
@@ -28,3 +33,5 @@ C:\Users\PRASHANSA\OneDrive\Desktop\ADS Notes\Assignment_Solutions\Assignment_2>
 Java Programming
 JavaProgramming
 */
+/*Time complexity:  O(n2).
+	*/
