@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove items from the drop-down list</title>
+</head>
+
+<body>
+    <h1>Drop down list</h1>
+    <form id="dropdownForm">
+        <label for="itemsDropdown">select an item to be removed:</label>
+        <select id="itemsDropdown" name="itemsDropdown">
+            <option value="Item1">Item1</option>
+            <option value="Item2">Item2</option>
+            <option value="Item3">Item3</option>
+            <option value="Item4">Item4</option>
+            <option value="Item5">Item5</option>
+        </select><br><br>
+
+        <button type="button" onclick="removeSelectedItem()">Remove selected Item</button>
+    </form>
+
+    <h2>Remaining items:</h2>
+    <ul id="remainingItemsList"></ul>
+
+    <script>
+        function removeSelectedItem() {
+            var dropdown = document.getElementById('itemsDropdown');
+            var selectedIndex = dropdown.selectedIndex;
+
+            if (selectedIndex >= 0) {
+                dropdown.remove(selectedIndex);
+
+            }
+
+            displayRemainingItems();
+
+        }
+
+        function displayRemainingItems() {
+            var dropdown = document.getElementById('itemsDropdown');
+            var remainingItemsList = document.getElementById('remainingItemsList');
+            remainingItemsList.innerHTML = '';
+
+            for (var i = 0; i < dropdown.options.length; i++) {
+                var li = document.createElement('li');
+                li.textContent = dropdown.options[i].text;
+                remainingItemsList.appendChild(li);
+            }
+        }
+
+        window.onload = displayRemainingItems;
+
+    </script>
+
+
+</body>
+
+</html>

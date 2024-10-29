@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+</head>
+<body>
+
+    <h1>Contact Form</h1>
+    <form id="contactForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName"><br><br>
+        
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName"><br><br>
+        
+        <label for="contactNo">Contact No.:</label>
+        <input type="text" id="contactNo" name="contactNo"><br><br>
+        
+        <label for="emailId">Email ID:</label>
+        <input type="email" id="emailId" name="emailId"><br><br>
+        
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <h2>Submitted Data:</h2>
+    <p id="formData"></p>
+
+    <script>
+        function submitForm() {
+            // Get form values
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            var contactNo = document.getElementById('contactNo').value;
+            var emailId = document.getElementById('emailId').value;
+
+            // Display form values
+            var formDataParagraph = document.getElementById('formData');
+            formDataParagraph.innerHTML = `
+                <strong>First Name:</strong> ${firstName} <br>
+                <strong>Last Name:</strong> ${lastName} <br>
+                <strong>Contact No.:</strong> ${contactNo} <br>
+                <strong>Email ID:</strong> ${emailId}
+            `;
+        }
+    </script>
+
+</body>
+</html>
