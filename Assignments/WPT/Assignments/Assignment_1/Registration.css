@@ -1,0 +1,7 @@
+.container{
+    padding: 500px;
+    padding-top: 50px;
+    background-color: plum;
+    justify-content: center;
+    border-width:10%
+}
