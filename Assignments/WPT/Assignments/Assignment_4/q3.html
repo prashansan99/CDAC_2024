@@ -1,0 +1,15 @@
+<script>
+function fetchData(url, callback) {
+    console.log(`Fetching data from website ${url}...`);
+
+    // Simulate network delay with setTimeout
+    setTimeout(function() {
+        const response = `Response from the website ${url}`;
+        callback(response);
+    }, 2000); // 2-second delay
+}
+
+fetchData("https://docs.oracle.com/javase/tutorial/getStarted/intro/definition.html", function(response) {
+    console.log("Received:", response);
+});
+</script>

@@ -1,0 +1,37 @@
+<script>
+    function fetchData(url, callback) {
+    console.log(`Fetching data from ${url}...`);
+
+    setTimeout(function() {
+        const error = Math.random() > 0.5;
+
+        if (error) {
+            callback(`Error fetching data from ${url}`, null);
+        } else {
+            const response = `Response from ${url}`;
+            callback(null, response);
+        }
+    }, 2000);
+}
+
+function processData(data, callback) {
+    console.log("Processing data...");
+
+    setTimeout(function() {
+        const processedData = data.toUpperCase() + " - Processed";
+        callback(processedData);
+    }, 1000); //
+}
+
+
+fetchData("https://docs.oracle.com/javase/tutorial/getStarted/intro/definition1.html", function(error, response) {
+    if (error) {
+        console.log("Error:", error);
+    } else {
+        processData(response, function(processedData) {
+            console.log("Processed Data:", processedData);
+        });
+    }
+});
+
+</script>

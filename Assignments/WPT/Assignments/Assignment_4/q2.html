@@ -1,0 +1,14 @@
+<script>
+function forEachElement(array, callback) {
+    for (let i = 0; i < array.length; i++) {
+        callback(array[i], i);
+    }
+}
+
+// Example usage:
+const arr = [1, 2, 3, 4];
+
+forEachElement(arr, function(element, index) {
+    console.log(`Index ${index}: ${element * 2}`);
+});
+</script>
